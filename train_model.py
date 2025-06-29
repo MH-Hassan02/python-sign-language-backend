@@ -35,18 +35,18 @@ def generate_dummy_data():
                 # Add some gesture-specific variations
                 if gesture_id == 0:  # Hello - open palm
                     x = base_x + np.random.normal(0, 0.1)
-                    y = base_y + np.random.normal(0, 0.1)
+                    y_coord = base_y + np.random.normal(0, 0.1)
                     z = base_z + np.random.normal(0, 0.05)
                 elif gesture_id == 1:  # Thank You - closed fist
                     x = base_x + np.random.normal(0, 0.05)
-                    y = base_y + np.random.normal(0, 0.05)
+                    y_coord = base_y + np.random.normal(0, 0.05)
                     z = base_z + np.random.normal(0, 0.02)
                 else:  # Other gestures
                     x = base_x + np.random.normal(0, 0.08)
-                    y = base_y + np.random.normal(0, 0.08)
+                    y_coord = base_y + np.random.normal(0, 0.08)
                     z = base_z + np.random.normal(0, 0.03)
                 
-                landmarks.extend([x, y, z])
+                landmarks.extend([x, y_coord, z])
             
             X.append(landmarks)
             y.append(int(gesture_id))
