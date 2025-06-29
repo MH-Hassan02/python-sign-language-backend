@@ -18,7 +18,7 @@ model_path = 'gesture_classifier.pkl'
 if os.path.exists(model_path):
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
-    logger.info("Model loaded successfully")
+    logger.info("Model loaded successfully tffffffffffffff")
 else:
     logger.warning("Model file not found. Using dummy classifier.")
     model = None
