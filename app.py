@@ -50,7 +50,7 @@ def predict_gesture():
         print("landmarks",landmarks)
         
         # Validate landmarks format
-        if not isinstance(landmarks, list) or len(landmarks) >= 10:  # 21 points * 3 coordinates
+        if not landmarks or len(landmarks) == 0:  # 21 points * 3 coordinates
             return jsonify({'error': 'Invalid landmarks format. Expected 63 values (21 points x 3 coordinates)'}), 400
         
         # Convert to numpy array and reshape
