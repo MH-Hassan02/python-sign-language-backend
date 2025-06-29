@@ -49,7 +49,7 @@ def generate_dummy_data():
                 landmarks.extend([x, y, z])
             
             X.append(landmarks)
-            y.append(gesture_id)
+            y.append(int(gesture_id))
     
     return np.array(X), np.array(y)
 
